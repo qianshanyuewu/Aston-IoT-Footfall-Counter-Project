@@ -6,23 +6,23 @@
 #include <Adafruit_MQTT.h>
 #include <Adafruit_MQTT_Client.h>
 
-// Wi-Fi 配置
-const char* ssid = "WI-FI名称";
-const char* password = "WI-FI密码";
+// Wi-Fi 配置（已替换敏感信息）
+const char* ssid = "abc_wifi";
+const char* password = "abc123456";
 
 // 定义传感器ID
 const char* sensorId = "footfall_sensor_001";
 
-// MQTT 服务器配置 (Adafruit IO)
+// MQTT 服务器配置 (Adafruit IO，已替换敏感信息)
 #define AIO_SERVER "io.adafruit.com"
 #define AIO_SERVERPORT 1883
-#define AIO_USERNAME "ADA_IO_USER"  // 替换为您的Adafruit IO用户名
-#define AIO_KEY "ADA_IO_KEY"  // 替换为您的Adafruit IO密钥
+#define AIO_USERNAME "abc_ada_user"  // 替换为您的Adafruit IO用户名
+#define AIO_KEY "abc_ada_key123"  // 替换为您的Adafruit IO密钥
 
-// MQTT 主题定义
-#define FOOTFALL_FEED "yihequanming/feeds/Headcount"
-#define AVERAGE_FEED "yihequanming/feeds/Average number of people per minute"
-#define CURRENT_INFO_FEED "yihequanming/feeds/Current information"
+// MQTT 主题定义（已替换敏感信息）
+#define FOOTFALL_FEED "abc_user/feeds/headcount"
+#define AVERAGE_FEED "abc_user/feeds/average_people"
+#define CURRENT_INFO_FEED "abc_user/feeds/current_info"
 
 // 创建ESP8266WebServer对象
 ESP8266WebServer server(80);
@@ -71,7 +71,7 @@ void handleResetCounter();
 void MQTT_connect();
 void publishFootfallData();
 
-// 优化后的HTML内容，存储在PROGMEM中
+// 优化后的HTML内容，存储在PROGMEM中（已替换敏感信息）
 const char PROGMEM INDEX_HTML[] = R"rawliteral(
 <!DOCTYPE html>
 <html lang="zh-CN" id="html-element">
@@ -1033,7 +1033,7 @@ const char PROGMEM INDEX_HTML[] = R"rawliteral(
         // 仪表板按钮点击事件
         const dashboardBtn = document.getElementById('dashboard-btn');
         dashboardBtn.addEventListener('click', () => {
-            window.open('https://io.adafruit.com/yihequanming/dashboards/intelligent-crowd-flow-detection', '_blank');
+            window.open('https://io.adafruit.com/abc_user/dashboards/intelligent-crowd-flow-detection', '_blank');
         });
 
         langBtn.addEventListener('click', () => {
