@@ -7,8 +7,8 @@
 #include <Adafruit_MQTT_Client.h>
 
 // Wi-Fi 配置
-const char* ssid = "千山月午";
-const char* password = "12345678";
+const char* ssid = "WI-FI名称";
+const char* password = "WI-FI密码";
 
 // 定义传感器ID
 const char* sensorId = "footfall_sensor_001";
@@ -16,8 +16,8 @@ const char* sensorId = "footfall_sensor_001";
 // MQTT 服务器配置 (Adafruit IO)
 #define AIO_SERVER "io.adafruit.com"
 #define AIO_SERVERPORT 1883
-#define AIO_USERNAME "yihequanming"  // 替换为您的Adafruit IO用户名
-#define AIO_KEY "aio_JFjR89CTRPhZDFW351NVXQXWEDDd"  // 替换为您的Adafruit IO密钥
+#define AIO_USERNAME "ADA_IO_USER"  // 替换为您的Adafruit IO用户名
+#define AIO_KEY "ADA_IO_KEY"  // 替换为您的Adafruit IO密钥
 
 // MQTT 主题定义
 #define FOOTFALL_FEED "yihequanming/feeds/Headcount"
